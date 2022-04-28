@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Всякая инфа</p>
+{% for key, value in food.items() %}
+<div class="timeitem">
+
+    <h3>{{ key }}</h3>
+
+    {% for i in value %}
+    <div class="fooditem">
+        <h4>{{ i.name }}</h4>
+        <p>
+            Сахар: {{ i.sugar * i.grams / 100 }} <br>
+            Клетчатка: {{ i.fibers * i.grams / 100 }}<br>
+            Каллории: {{ i.calories * i.grams / 100 }}<br>
+            Жиры: {{ i.fat * i.grams / 100 }}<br>
+            Углеводы: {{ i.carbohydrates * i.grams / 100}} <br>
+            Белки: {{ i.proteins * i.grams / 100}}
+        <br>
+        </p>
+
+    </div>
+
+    {% endfor %}
+
+    <br>
+
+</div>
+<br>
+{% endfor %}
+{% endblock %}

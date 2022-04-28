@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_calories.css') }}">
+
+    <title>Калькулятор калорий</title>
+</head>
+<body>
+
+<header>
+<form action="{{ url_for('profile') }}" method="get">
+                    <div>
+                        <div class="text-box">
+                            <a href="/profile" class="btn btn-white btn-animate">Профиль</a>
+                            <br><br><br><br>
+
+                        </div>
+                    </div>
+                </form>
+
+</header>
+
+<br>
+<br>
+
+<main role="main" class="container">
+<table>
+    <colgroup width="500" span="3">
+        <tr heigh="200">
+            <td><br><br><br><br><br></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="ses">
+                <br>
+                <br>
+                <form action="{{ url_for('calories') }}" method="post">
+                    <p>
+
+                    <div>Введите название продукта</div>
+                    <br>
+                    <div><input type="text" name="proj" placeholder="Поиск.."/></div>
+
+                    </p>
+                    <p><input type="submit" value="Поиск"/></p>
+                </form>
+            </td>
+            <td>
+                <div class="calories">
+                    <br>
+                    {% if calories %}
+                    <h1>{{name}}</h1>
+
+                    <p>Сахар: {{calories[0]["sugar_g"]}} <br>Клетчатка: {{calories[0]["fiber_g"]}}<br>
+                        Калории: {{calories[0]["calories"]}}<br>Жиры: {{ calories[0]["fat_total_g"] }}<br>Белки:
+                        {{calories[0]["protein_g"]}}<br>Углеводы:
+                        {{calories[0]["carbohydrates_total_g"]}}</p>
+                    {% else %}
+                    <p>Введите текст</p>
+                    {% endif %}
+                    <br>
+                </div>
+                <br>
+            </td>
+            <td class="ses"><img src="static/pic1.png"></td>
+        </tr>
+
+        <form method="post" action="{{ url_for('edit_calories') }}">
+            <tr>
+                <td>
+                    <input type="hidden" value="{{ name }}" readonly name="name"></td>
+                <td>
+                    <div>
+                        <div class="radiogroup">
+                            <div class="wrapper">
+                                <input class="state" type="radio" name="eat_time" value="Завтрак" id="a">
+                                <label class="label" for="a">
+                                    <div class="indicator"></div>
+                                    <span class="text">Завтрак</span>
+                                </label>
+                            </div>
+                            <div class="wrapper">
+                                <input class="state" type="radio" name="eat_time" id="b" value="Обед">
+                                <label class="label" for="b">
+                                    <div class="indicator"></div>
+                                    <span class="text">Обед</span>
+                                </label>
+                            </div>
+                            <div class="wrapper">
+                                <input class="state" type="radio" name="eat_time" id="c" value="Ужин">
+                                <label class="label" for="c">
+                                    <div class="indicator"></div>
+                                    <span class="text">Ужин</span>
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div>Введите количество в граммах</div>
+                        <br>
+                        <div>
+                            <input type="number" name="proj1" placeholder="100"/></div>
+                        <br>
+                    </div>
+                </td>
+                <td class="ses">
+                    <div class="att"><h5>Перед нажатием, убедитесь,
+                        что продукт отображается в окошке "калории".</h5></div>
+                    <br>
+
+                    {% if current_user.is_authenticated%}
+                    <input type="submit" class="btn btn-outline-success" value="Я поел(а)"></td>
+            </tr>
+            {% endif %}
+        </form>
+</table></main>
+</body>
+</html>

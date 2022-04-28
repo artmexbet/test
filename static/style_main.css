@@ -1,0 +1,120 @@
+body {
+    font-family: font-family: 'IBM Plex Sans Condensed', sans-serif;
+    background-color: #ecf0f3;
+    font-weight: bold;
+}
+
+div[class="hed"]{
+position: absolute; /* Абсолютное позиционирование */
+    top: 40px;
+    left: 575px; /* Положение от правого края */
+}
+div[class="vmeste"]{
+position: absolute; /* Абсолютное позиционирование */
+    top:160px;
+    left: 360px; /* Положение от правого края */
+}
+div[class="infoca"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:300px;
+    left: 100px;
+    color: #555555;
+ background-color: #ecf0f3;
+ height: 500px;
+ width: 40%;
+ text-align: center;
+ padding: 12px 20px 12px 40px;
+ border-radius: 20px;
+   box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+}
+div[class="im1"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:350px;
+    left: 900px;
+    text-align: center;
+    }
+div[class="info2"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:800px;
+    left: 800px;
+    color: #555555;
+ background-color: #ecf0f3;
+ height: 500px;
+ width: 40%;
+ text-align: center;
+ padding: 12px 20px 12px 40px;
+ border-radius: 20px;
+   box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+}
+div[class="im2"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:850px;
+    left: 200px;
+    text-align: center;
+    }
+div[class="info3"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:1300px;
+    left: 100px;
+    color: #555555;
+ background-color: #ecf0f3;
+ height: 500px;
+ width: 40%;
+ text-align: center;
+ padding: 12px 20px 12px 40px;
+ border-radius: 20px;
+   box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+}
+div[class="im3"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:1350px;
+    left: 900px;
+    text-align: center;
+    }
+div[class="info4"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:1800px;
+    left: 800px;
+    color: #555555;
+ background-color: #ecf0f3;
+ height: 500px;
+ width: 40%;
+ text-align: center;
+ padding: 12px 20px 12px 40px;
+ border-radius: 20px;
+   box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+}
+div[class="im4"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:1850px;
+    left: 200px;
+    text-align: center;
+    }
+div[class="info5"] {
+position: absolute; /* Абсолютное позиционирование */
+    top:2400px;
+    left: 100px;
+    color: #555555;
+ background-color: #ecf0f3;
+ height: 150px;
+ width: 86%;
+ text-align: center;
+ padding: 12px 20px 12px 40px;
+ border-radius: 20px;
+   box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+}
+div[class="hidd"]{
+position: absolute; /* Абсолютное позиционирование */
+    top:2600px;
+    color:#ecf0f3;
+}

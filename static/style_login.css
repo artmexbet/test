@@ -1,0 +1,157 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #ecf0f3;
+    font-weight: bold;
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 5px 5px;
+    background-image: url('login.png');
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+  width: 80%;
+}
+textarea {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 5px 5px;
+    background-image: url('robot.png');
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=email] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 5px 5px;
+    background-image: url('email.png');
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=email]:focus {
+  width: 80%;
+}
+input[type=password] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+    background-image: url('lock.png');
+  background-color: white;
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=password]:focus {
+  width: 80%;
+}
+
+div[id="passwords"]{
+position: absolute; /* Абсолютное позиционирование */
+    top: 200px; /* Положение от нижнего края */
+    left: 700px; /* Положение от правого края */
+    display: none;
+}
+
+button[class="btn"]{
+position: absolute; /* Абсолютное позиционирование */
+    top: 120px; /* Положение от нижнего края */
+    left: 700px; /* Положение от правого края */
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: #333333;
+    border: none;
+    color: #f0f0f0;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button[class="btn"]:link,
+button[class="btn"]:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    position: absolute;
+}
+
+button[class="btn"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button[class="btn"]:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button[class="btn"]-white {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+button[class="btn"]::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+button[class="btn"]-white::after {
+    background-color: #888888;
+}
+
+button[class="btn"]:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+button[class="btn"]-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+input[type=file]{
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: #333333;
+    background: linear-gradient(to right, #999999, #111111);
+    border: none;
+    color: #f0f0f0;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+div[class="all"]{
+position: absolute;
+left: 325px;
+}

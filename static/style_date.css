@@ -1,0 +1,13 @@
+div[class="timeitem"] {
+
+    color: #555555;
+ background-color: #ecf0f3;
+ height: 100%;
+ width: 100%;
+ text-align: center;
+ padding: 12px 20px 12px 40px;
+ border-radius: 20px;
+   box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+}
