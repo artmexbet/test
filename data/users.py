@@ -2,7 +2,7 @@ import datetime
 import sqlalchemy
 from sqlalchemy import orm
 from werkzeug.security import *
-from flask_login import *
+from flask_login import UserMixin
 from .db_session import SqlAlchemyBase
 
 
