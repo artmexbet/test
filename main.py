@@ -133,10 +133,11 @@ def calories(string=''):
 def date_calories(date):
     temp = sorted([i for i in current_user.eat if str(i.modified_date) == date],
                   key=lambda x: x.eat_time)
+    total = sum([i.calories * i.grams for i in temp])
     a = {"Завтрак": [], "Обед": [], "Ужин": []}
     for i in temp:
         a[i.eat_time].append(i)
-    return render_template("date_calories.html", food=a, title="Отчёт о питании")
+    return render_template("date_calories.html", food=a, title="Отчёт о питании", total=total)
 
 
 @login_required
@@ -167,6 +168,8 @@ def change_photo():
 def edit_calories():
     form = request.form
     a = get_translated_calories(form["name"])
+    if not a["items"]:
+        return render_template("cal_error.html", title='Ошибка')
 
     db_sess = db_session.create_session()
     food = Friend(
