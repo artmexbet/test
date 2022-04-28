@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask import *
 from data import db_session, users
 from flask_login import LoginManager, login_required, logout_user, login_user, current_user
